@@ -5,9 +5,9 @@ import { TextReveal } from "@/components/ui/TextReveal";
 import { Globe } from "@/components/ui/globe/Globe";
 
 const points = [
-  { k: "Remote-first", v: "A distributed senior team operating across time zones." },
-  { k: "Compliance-ready", v: "Engineered to meet strict government and enterprise requirements." },
-  { k: "Always-on", v: "24/7 monitoring and response for mission-critical platforms." },
+  { k: "India + global", v: "Based in India, delivering for clients across time zones worldwide." },
+  { k: "Always in sync", v: "Clear, regular communication and updates throughout every project." },
+  { k: "Always-on support", v: "24/7 monitoring and rapid response for the products we maintain." },
 ];
 
 export function GlobalReach() {
@@ -19,14 +19,14 @@ export function GlobalReach() {
             <Eyebrow>Global reach</Eyebrow>
           </Reveal>
           <TextReveal
-            text="Engineered locally. Deployed at planetary scale."
+            text="Based in India. Building for the world."
             className="mt-6 max-w-xl text-4xl font-semibold leading-[1.06] text-cloud sm:text-5xl"
           />
           <Reveal delay={0.1}>
             <p className="mt-6 max-w-lg text-pretty leading-relaxed text-mist">
-              Our platforms process billions of events and serve users across
-              continents — without compromising on latency, security, or
-              reliability.
+              We work with founders and teams across continents — shipping fast,
+              communicating clearly, and supporting every product long after it
+              goes live.
             </p>
           </Reveal>
 

@@ -11,8 +11,8 @@ export function ProjectsPreview() {
       <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
         <SectionHeading
           eyebrow="Selected work"
-          title="Systems running where it matters"
-          description="A look at platforms we've engineered across blockchain, telecom, enterprise, and data."
+          title="Our work speaks"
+          description="A look at products we've designed and built across web, mobile, blockchain, and crypto."
           className="max-w-2xl"
         />
         <Reveal delay={0.2} className="hidden md:block">

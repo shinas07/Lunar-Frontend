@@ -8,6 +8,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Intro } from "@/components/layout/Intro";
 import { CustomCursor } from "@/components/layout/CustomCursor";
+import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { GrainOverlay } from "@/components/ui/GrainOverlay";
 import { JsonLd } from "@/components/seo/JsonLd";
 
@@ -40,15 +41,17 @@ export const metadata: Metadata = {
   description: site.description,
   applicationName: site.name,
   keywords: [
-    "Lunar",
-    "software engineering company",
-    "blockchain development",
-    "telecom intelligence",
-    "enterprise software",
-    "government technology",
-    "data platforms",
-    "product engineering",
-    "cloud solutions",
+    "Lunar Global Technologies",
+    "web development company India",
+    "blockchain development company",
+    "smart contract development",
+    "NFT marketplace development",
+    "DeFi platform development",
+    "mobile app development company",
+    "web3 development agency",
+    "crypto solutions company",
+    "website maintenance services India",
+    "on demand product development company",
   ],
   authors: [{ name: site.legalName }],
   creator: site.legalName,
@@ -111,6 +114,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );

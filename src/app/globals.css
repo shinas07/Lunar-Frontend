@@ -9,28 +9,30 @@
  */
 
 @theme {
-  /* ----- Core surfaces (deep black → midnight navy → charcoal) ----- */
-  --color-ink: #05060a;
-  --color-ink-2: #080a12;
-  --color-surface: #0b0e18;
-  --color-surface-2: #0e1320;
-  --color-elevated: #141a2b;
-  --color-line: #1e2435;
-  --color-line-strong: #2a3147;
+  /* ----- Core surfaces (deep navy → midnight blue) ----- */
+  --color-ink: #060a16;
+  --color-ink-2: #081021;
+  --color-surface: #0b1226;
+  --color-surface-2: #0e1730;
+  --color-elevated: #162040;
+  --color-line: #1a2845;
+  --color-line-strong: #1e3a5f;
 
   /* ----- Text ramp ----- */
-  --color-cloud: #eef2fb;
-  --color-haze: #c2cadb;
-  --color-mist: #8b94ac;
-  --color-faint: #5d6680;
+  --color-cloud: #eef3fb;
+  --color-haze: #c2cbdd;
+  --color-mist: #8b96b0;
+  --color-faint: #5d6a88;
 
-  /* ----- Accents (electric blue + purple) ----- */
-  --color-electric: #4da6ff;
-  --color-electric-bright: #7cc0ff;
-  --color-electric-deep: #2a6fd6;
-  --color-violet: #8b5cf6;
-  --color-violet-bright: #a98bff;
+  /* ----- Accents (brand cyan + teal + gold) ----- */
+  --color-electric: #00c2ff;
+  --color-electric-bright: #5fd9ff;
+  --color-electric-deep: #0a7ea4;
+  --color-violet: #14a8cf;
+  --color-violet-bright: #4fd3ec;
   --color-aqua: #38e0d0;
+  --color-gold: #f5a623;
+  --color-gold-bright: #ffc05a;
 
   /* ----- Typography ----- */
   --font-display: var(--font-display), "Space Grotesk", system-ui, sans-serif;

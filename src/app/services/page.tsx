@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Blockchain development, telecom intelligence systems, enterprise software, product engineering, cloud solutions, and data platforms — engineered by Lunar.",
+    "Web development, Web3 & blockchain, mobile apps, product development, crypto solutions, and maintenance — full-service technology by Lunar Global Technologies.",
   alternates: { canonical: "/services" },
 };
 
@@ -28,8 +28,8 @@ export default function ServicesPage() {
     <>
       <PageHeader
         eyebrow="Services"
-        title="Six disciplines. One engineering standard."
-        description="We design and operate the systems our clients depend on — from decentralized infrastructure to national-scale intelligence platforms."
+        title="Everything you need to build and grow."
+        description="Six full-service disciplines across Web2, Web3, and mobile — from first website to on-chain platform, all under one roof."
       />
 
       <Section className="pt-10">
@@ -76,10 +76,10 @@ export default function ServicesPage() {
                       className="p-8"
                       spotlightColor={
                         service.accent === "violet"
-                          ? "rgba(139,92,246,0.16)"
+                          ? "rgba(20,168,207,0.16)"
                           : service.accent === "aqua"
                           ? "rgba(56,224,208,0.14)"
-                          : "rgba(77,166,255,0.16)"
+                          : "rgba(0,194,255,0.16)"
                       }
                     >
                       <h3 className="font-mono text-xs uppercase tracking-[0.2em] text-faint">

@@ -6,8 +6,8 @@ import { cn } from "@/lib/utils";
 import type { Service } from "@/lib/data";
 
 const accentMap = {
-  electric: { text: "text-electric", glow: "rgba(77,166,255,0.16)", ring: "group-hover:border-electric/40" },
-  violet: { text: "text-violet-bright", glow: "rgba(139,92,246,0.16)", ring: "group-hover:border-violet/40" },
+  electric: { text: "text-electric", glow: "rgba(0,194,255,0.16)", ring: "group-hover:border-electric/40" },
+  violet: { text: "text-violet-bright", glow: "rgba(20,168,207,0.16)", ring: "group-hover:border-violet/40" },
   aqua: { text: "text-aqua", glow: "rgba(56,224,208,0.14)", ring: "group-hover:border-aqua/40" },
 } as const;
 

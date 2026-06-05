@@ -23,27 +23,27 @@ export function WhyLunar() {
           <SpotlightCard className="flex h-full flex-col justify-between overflow-hidden p-8">
             <div
               aria-hidden
-              className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[radial-gradient(circle,rgba(77,166,255,0.22),transparent_70%)] blur-2xl"
+              className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[radial-gradient(circle,rgba(0,194,255,0.22),transparent_70%)] blur-2xl"
             />
             <div className="relative">
               <span className="font-mono text-xs uppercase tracking-[0.2em] text-electric">
-                Engineering standard
+                Why clients choose us
               </span>
               <h3 className="mt-5 font-display text-3xl font-semibold leading-tight text-cloud">
-                Correctness is not negotiable.
+                One partner. Web2, Web3 &amp; everything between.
               </h3>
               <p className="mt-4 text-pretty leading-relaxed text-mist">
-                In settlement networks and intelligence platforms, a single
-                undefined edge case is a production incident. We engineer for the
-                hard path first — verifiable, observable, and resilient by design.
+                Most agencies do one thing. We design, build, and maintain the whole
+                stack — websites, web apps, mobile, smart contracts, and cloud — so
+                you get a coherent product and a single team that owns the outcome.
               </p>
             </div>
             <div className="relative mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-line bg-line">
               {[
-                ["100%", "Audit coverage"],
-                ["0", "Single points of failure"],
-                ["24/7", "Observability"],
-                ["E2E", "Test discipline"],
+                ["End-to-end", "Design to deploy"],
+                ["Web2 + Web3", "Under one roof"],
+                ["24/7", "Support & monitoring"],
+                ["On-time", "Every milestone"],
               ].map(([v, l]) => (
                 <div key={l} className="bg-surface/80 p-4">
                   <div className="font-display text-xl font-semibold text-cloud">{v}</div>

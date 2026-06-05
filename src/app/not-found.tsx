@@ -8,7 +8,7 @@ export default function NotFound() {
       <Starfield />
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,rgba(77,166,255,0.16),transparent_55%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,rgba(0,194,255,0.16),transparent_55%)]"
       />
       <Moon className="absolute right-[8%] top-[14%] w-40 opacity-70 md:w-56" />
 

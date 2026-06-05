@@ -11,6 +11,7 @@ import { NextResponse } from "next/server";
 type Payload = {
   name?: string;
   email?: string;
+  phone?: string;
   company?: string;
   budget?: string;
   service?: string;
@@ -20,6 +21,7 @@ type Payload = {
 };
 
 const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const phoneRe = /^[+]?[\d\s()-]{7,18}$/;
 
 export async function POST(request: Request) {
   let data: Payload;
@@ -35,10 +37,12 @@ export async function POST(request: Request) {
   }
 
   const errors: Record<string, string> = {};
-  if (!data.name?.trim()) errors.name = "Name is required.";
+  if (!data.name?.trim() || data.name.trim().length < 2) errors.name = "Name is required.";
   if (!data.email?.trim() || !emailRe.test(data.email)) errors.email = "A valid email is required.";
-  if (!data.message?.trim() || data.message.trim().length < 10)
-    errors.message = "Please tell us a little more (10+ characters).";
+  if (!data.phone?.trim() || !phoneRe.test(data.phone.trim()))
+    errors.phone = "A valid phone number is required.";
+  if (data.message?.trim() && data.message.trim().length < 10)
+    errors.message = "Please add a little more detail (10+ characters).";
 
   if (Object.keys(errors).length > 0) {
     return NextResponse.json({ ok: false, errors }, { status: 422 });
@@ -53,6 +57,7 @@ export async function POST(request: Request) {
   console.info("[contact] new inquiry", {
     name: data.name,
     email: data.email,
+    phone: data.phone,
     company: data.company,
     service: data.service,
     budget: data.budget,

@@ -18,7 +18,7 @@ export function PageHeader({
       <Starfield className="opacity-80" />
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_-20%,rgba(77,166,255,0.18),transparent_55%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_-20%,rgba(0,194,255,0.18),transparent_55%)]"
       />
       <div
         aria-hidden

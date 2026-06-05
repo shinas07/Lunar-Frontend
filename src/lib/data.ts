@@ -1,20 +1,20 @@
 import {
+  Code2,
   Blocks,
-  Radar,
-  Building2,
+  Smartphone,
   Boxes,
-  CloudCog,
-  Database,
+  Coins,
+  LifeBuoy,
+  Layers,
+  Clock,
+  BadgeCheck,
+  Users,
+  ShieldCheck,
+  Handshake,
   Compass,
   PenTool,
   Cpu,
   Rocket,
-  Gauge,
-  ShieldCheck,
-  Sparkles,
-  GitBranch,
-  Layers,
-  Network,
   type LucideIcon,
 } from "lucide-react";
 
@@ -33,111 +33,111 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    slug: "blockchain-development",
-    title: "Blockchain Development",
-    icon: Blocks,
-    tagline: "Trustless infrastructure, engineered for scale.",
+    slug: "web-development",
+    title: "Web Development",
+    icon: Code2,
+    tagline: "Web 2.0, done right.",
     description:
-      "We design and ship decentralized systems — from settlement networks and smart contracts to tokenization and secure on-chain data — built for institutions that demand correctness and resilience.",
+      "Custom websites and web applications engineered for speed, scale, and conversion — from corporate sites and e-commerce to SaaS platforms, dashboards, and portals.",
     capabilities: [
-      "Smart contract architecture & audits",
-      "Distributed ledger & settlement networks",
-      "Tokenization & digital asset platforms",
-      "Wallet, custody & key-management systems",
-      "Zero-knowledge & privacy-preserving proofs",
+      "Corporate sites, portfolios, landing pages & e-commerce",
+      "SaaS platforms, dashboards & internal portals",
+      "Frontend: React.js, Next.js, Vue.js",
+      "Backend: Node.js, Python, PHP, Laravel",
+      "REST & GraphQL APIs · CMS (WordPress, Strapi, Contentful)",
     ],
     accent: "electric",
   },
   {
-    slug: "telecom-intelligence",
-    title: "Telecom Intelligence Systems",
-    icon: Radar,
-    tagline: "Signal at national scale.",
+    slug: "web3-blockchain",
+    title: "Web3 & Blockchain",
+    icon: Blocks,
+    tagline: "Decentralized, by design.",
     description:
-      "Platforms that ingest, process, and analyze communication-activity data at massive throughput for authorized government and operator use cases — with auditability and access control engineered in from day one.",
+      "Smart contracts, DeFi protocols, NFT marketplaces, and DAOs built on Ethereum, Solana, BNB Chain, and Polygon — audit-ready and engineered for trust.",
     capabilities: [
-      "High-throughput data ingestion pipelines",
-      "Real-time correlation & pattern analysis",
-      "Lawful-access & policy-controlled workflows",
-      "Geospatial & temporal intelligence",
-      "Tamper-evident audit & compliance logging",
+      "Smart contracts (Ethereum, Solana, BNB Chain, Polygon)",
+      "DeFi platforms — DEX, staking & yield farming",
+      "NFT marketplaces — minting, listing & royalties",
+      "DAO development & governance",
+      "Web3 wallet integration & blockchain consulting",
     ],
     accent: "violet",
   },
   {
-    slug: "enterprise-software",
-    title: "Enterprise Software",
-    icon: Building2,
-    tagline: "Mission-critical systems that hold up.",
+    slug: "mobile-apps",
+    title: "Mobile App Development",
+    icon: Smartphone,
+    tagline: "Native feel, every platform.",
     description:
-      "Scalable internal platforms, workflow automation, and operational systems that replace fragmented tooling with a single, dependable source of truth across your organization.",
+      "iOS, Android, and cross-platform apps — including Web3-enabled DApp clients — designed, built, and shipped to the App Store and Play Store.",
     capabilities: [
-      "Modular platform & micro-service design",
-      "Workflow automation & orchestration",
-      "Identity, roles & access governance",
-      "Legacy modernization & migration",
-      "SLAs, observability & 24/7 reliability",
+      "iOS (Swift, Objective-C)",
+      "Android (Kotlin, Java)",
+      "Cross-platform (React Native, Flutter)",
+      "Web3-enabled mobile DApp clients",
+      "App Store & Play Store submission + ASO",
     ],
     accent: "aqua",
   },
   {
-    slug: "product-engineering",
-    title: "Product Engineering",
+    slug: "product-development",
+    title: "Product Development",
     icon: Boxes,
-    tagline: "From whiteboard to production.",
+    tagline: "From idea to launch.",
     description:
-      "End-to-end product teams that take an idea through discovery, design, and engineering into a launched product — with the craft of a startup and the rigor of an enterprise.",
+      "End-to-end product builds for startups and teams — MVPs, SaaS architecture, and design-to-deploy delivery with UI/UX prototyping baked in.",
     capabilities: [
-      "Product discovery & technical strategy",
-      "UX/UI design systems",
-      "Full-stack web & mobile engineering",
-      "API & platform development",
-      "Rapid prototyping & validation",
+      "End-to-end conceptualisation, design & development",
+      "MVP builds for startups",
+      "SaaS product architecture",
+      "Product roadmap consulting",
+      "UI/UX design — Figma wireframes & prototypes",
     ],
     accent: "electric",
   },
   {
-    slug: "cloud-solutions",
-    title: "Cloud Solutions",
-    icon: CloudCog,
-    tagline: "Infrastructure that scales without drama.",
+    slug: "crypto-solutions",
+    title: "Crypto Solutions",
+    icon: Coins,
+    tagline: "Launch and scale on-chain.",
     description:
-      "Cloud-native architecture, automation, and DevOps practices that make your systems elastic, secure, and observable — engineered to grow from first user to national scale.",
+      "Token creation, tokenomics design, and crypto payment integrations — from ERC-20/721/1155 and BEP-20 tokens to wallets and gateways.",
     capabilities: [
-      "Cloud-native architecture (AWS / GCP / Azure)",
-      "Kubernetes & container orchestration",
-      "Infrastructure-as-code & CI/CD",
-      "Security hardening & zero-trust networking",
-      "Cost optimization & FinOps",
+      "Token creation (ERC-20, ERC-721, ERC-1155, BEP-20)",
+      "Tokenomics design & modelling",
+      "Crypto payment gateway integration",
+      "Wallet integration (MetaMask, WalletConnect, Phantom)",
+      "Audit-ready, secure contract code",
     ],
     accent: "violet",
   },
   {
-    slug: "data-platforms",
-    title: "Data Platforms",
-    icon: Database,
-    tagline: "Decisions, powered by your data.",
+    slug: "maintenance-support",
+    title: "Maintenance & Support",
+    icon: LifeBuoy,
+    tagline: "We don't ship and disappear.",
     description:
-      "Data intelligence systems — pipelines, warehouses, analytics, and machine learning — that turn raw, high-volume data into a measurable operational advantage.",
+      "Ongoing AMC packages, 24/7 monitoring, security patching, and cloud management — so your product stays fast, secure, and online.",
     capabilities: [
-      "Streaming & batch data pipelines",
-      "Lakehouse & warehouse architecture",
-      "Real-time analytics & dashboards",
-      "Machine learning & model deployment",
-      "Data governance & quality",
+      "Monthly / quarterly AMC packages",
+      "Bug fixing, performance & security patching",
+      "24/7 uptime monitoring & incident response",
+      "Code reviews & technical-debt reduction",
+      "Cloud infrastructure management (AWS, Azure, GCP)",
     ],
     accent: "aqua",
   },
 ];
 
 /* ------------------------------------------------------------------ */
-/*  Projects / Case studies                                          */
+/*  Portfolio / Case studies                                         */
 /* ------------------------------------------------------------------ */
 export type Project = {
   slug: string;
   name: string;
   sector: string;
-  status: "In Production" | "In Development" | "Case Study";
+  status: "Live" | "Completed" | "In Progress";
   year: string;
   summary: string;
   highlights: string[];
@@ -148,117 +148,188 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "distributed-settlement-network",
-    name: "Distributed Settlement Network",
-    sector: "Blockchain",
-    status: "In Production",
+    slug: "defi-staking-platform",
+    name: "DeFi Staking Platform",
+    sector: "Web3 & Blockchain",
+    status: "Live",
     year: "2025",
     summary:
-      "A high-assurance distributed ledger that settles institutional transactions with cryptographic finality, replacing slow, opaque reconciliation with a single verifiable source of truth.",
+      "A non-custodial staking and yield-farming protocol with audited smart contracts, a real-time rewards dashboard, and multi-wallet support.",
     highlights: [
-      "Deterministic smart-contract settlement engine",
-      "Sub-second finality across distributed validators",
-      "Independent third-party security audit passed",
+      "Audited staking & reward contracts on Polygon",
+      "Real-time APY & rewards dashboard",
+      "MetaMask + WalletConnect integration",
     ],
     metrics: [
-      { label: "Settlement finality", value: "<1s" },
-      { label: "Uptime", value: "99.99%" },
-      { label: "Throughput", value: "10k tps" },
+      { label: "Total value locked", value: "$4M+" },
+      { label: "Active wallets", value: "12k+" },
+      { label: "Audit score", value: "A" },
+    ],
+    accent: "violet",
+  },
+  {
+    slug: "nft-marketplace",
+    name: "NFT Marketplace",
+    sector: "Web3 & Blockchain",
+    status: "Live",
+    year: "2025",
+    summary:
+      "A full-featured NFT marketplace with lazy minting, on-chain royalties, collection pages, and an auction engine.",
+    highlights: [
+      "Gas-efficient lazy minting",
+      "On-chain creator royalties",
+      "Bid, buy-now & auction flows",
+    ],
+    metrics: [
+      { label: "NFTs minted", value: "30k+" },
+      { label: "Avg. mint cost", value: "−40%" },
+      { label: "Chains", value: "3" },
     ],
     accent: "electric",
   },
   {
-    slug: "telecom-intelligence-platform",
-    name: "Telecom Intelligence Platform",
-    sector: "Telecommunications",
-    status: "In Development",
-    year: "2026",
+    slug: "saas-analytics-dashboard",
+    name: "SaaS Analytics Dashboard",
+    sector: "Web Development",
+    status: "Live",
+    year: "2024",
     summary:
-      "A national-scale platform that processes and analyzes communication-activity data for authorized government use cases — engineered with lawful-access controls, full auditability, and real-time correlation.",
+      "A multi-tenant SaaS analytics platform with role-based access, billing, and a fast, real-time charting dashboard.",
     highlights: [
-      "Ingestion pipeline built for billions of daily events",
-      "Policy-gated, role-based lawful access",
-      "Real-time geospatial & temporal correlation",
+      "Multi-tenant architecture with RBAC",
+      "Stripe billing & subscription management",
+      "Real-time charts over large datasets",
     ],
     metrics: [
-      { label: "Daily events", value: "10B+" },
-      { label: "Query latency", value: "<200ms" },
-      { label: "Audit coverage", value: "100%" },
+      { label: "Tenants", value: "200+" },
+      { label: "p95 load", value: "<1.2s" },
+      { label: "Uptime", value: "99.9%" },
     ],
-    accent: "violet",
-    confidential: true,
+    accent: "electric",
   },
   {
-    slug: "enterprise-resource-suite",
-    name: "Enterprise Resource Suite",
-    sector: "Government & Enterprise",
-    status: "In Production",
-    year: "2025",
+    slug: "cross-platform-delivery-app",
+    name: "Cross-Platform Delivery App",
+    sector: "Mobile Apps",
+    status: "Live",
+    year: "2024",
     summary:
-      "A modular operations suite that unified procurement, identity, and workflow for a large organization — retiring a decade of fragmented legacy tooling.",
+      "A React Native delivery app with live order tracking, maps, push notifications, and integrated payments — shipped to both app stores.",
     highlights: [
-      "Unified identity & access governance",
-      "Automated multi-stage approval workflows",
-      "Migrated 12+ legacy systems with zero data loss",
+      "Live GPS order tracking",
+      "Push notifications & in-app payments",
+      "Single codebase, iOS + Android",
     ],
     metrics: [
-      { label: "Legacy systems retired", value: "12+" },
-      { label: "Process time cut", value: "−64%" },
-      { label: "Active users", value: "8,000+" },
+      { label: "Downloads", value: "50k+" },
+      { label: "Store rating", value: "4.7★" },
+      { label: "Crash-free", value: "99.8%" },
     ],
     accent: "aqua",
   },
   {
-    slug: "realtime-data-intelligence",
-    name: "Real-time Data Intelligence Engine",
-    sector: "Data Platforms",
-    status: "Case Study",
+    slug: "corporate-website-cms",
+    name: "Corporate Website & CMS",
+    sector: "Web Development",
+    status: "Completed",
     year: "2024",
     summary:
-      "A streaming analytics engine that turns high-volume operational data into live decision intelligence, with sub-second dashboards and embedded machine-learning models.",
+      "A high-performance corporate website on Next.js with a headless CMS, multilingual content, and a 95+ Lighthouse score.",
     highlights: [
-      "Streaming lakehouse architecture",
-      "Sub-second analytical queries at scale",
-      "Embedded anomaly-detection models",
+      "Headless CMS for non-technical editors",
+      "Multilingual, SEO-optimised pages",
+      "95+ Lighthouse across the board",
     ],
     metrics: [
-      { label: "Data scanned", value: "5PB+" },
-      { label: "Query latency", value: "<800ms" },
-      { label: "Models in prod", value: "20+" },
+      { label: "Lighthouse", value: "95+" },
+      { label: "Organic traffic", value: "+140%" },
+      { label: "Languages", value: "3" },
     ],
     accent: "electric",
+  },
+  {
+    slug: "token-launch-tokenomics",
+    name: "Token Launch & Tokenomics",
+    sector: "Crypto Solutions",
+    status: "Completed",
+    year: "2025",
+    summary:
+      "End-to-end token launch: ERC-20 contract, vesting, tokenomics modelling, and a presale dApp with crypto payments.",
+    highlights: [
+      "ERC-20 token with vesting & locks",
+      "Tokenomics model & distribution",
+      "Presale dApp with wallet payments",
+    ],
+    metrics: [
+      { label: "Raised", value: "$1.2M" },
+      { label: "Holders", value: "8k+" },
+      { label: "Contract audit", value: "Passed" },
+    ],
+    accent: "violet",
   },
 ];
 
 /* ------------------------------------------------------------------ */
-/*  Values                                                            */
+/*  Values (About page)                                              */
 /* ------------------------------------------------------------------ */
 export type Value = { title: string; description: string; icon: LucideIcon };
 
 export const values: Value[] = [
   {
-    title: "Precision",
+    title: "Client-First Approach",
     description:
-      "We engineer for correctness. In the systems we build, a rounding error can cost a settlement or a signal — so we leave nothing to chance.",
-    icon: Gauge,
+      "Your goals drive every decision. We listen first, advise honestly, and treat your product as if it were our own.",
+    icon: Handshake,
   },
   {
-    title: "Trust",
+    title: "Transparent Pricing",
     description:
-      "Governments and enterprises hand us their hardest, most sensitive problems. Security, auditability, and discretion are defaults, not features.",
+      "Clear scopes, clear quotes, no surprises. You always know what you're paying for and why.",
+    icon: BadgeCheck,
+  },
+  {
+    title: "Quality & Security",
+    description:
+      "Clean, reviewed, audit-ready code — with security and performance treated as defaults, not afterthoughts.",
     icon: ShieldCheck,
   },
   {
-    title: "Innovation",
+    title: "Long-Term Partnership",
     description:
-      "We work at the frontier — blockchain, telecom intelligence, applied ML — and bring proven engineering discipline to emerging technology.",
-    icon: Sparkles,
+      "We're in it beyond launch — maintaining, improving, and scaling your product as your business grows.",
+    icon: Users,
+  },
+];
+
+/* ------------------------------------------------------------------ */
+/*  Differentiators (home "Why choose us" bento)                     */
+/* ------------------------------------------------------------------ */
+export type Capability = { title: string; description: string; icon: LucideIcon };
+
+export const capabilities: Capability[] = [
+  {
+    title: "Web2 + Web3 under one roof",
+    description:
+      "Websites, apps, and blockchain — one team that speaks both worlds, so your stack stays coherent.",
+    icon: Blocks,
   },
   {
-    title: "Ownership",
+    title: "Full-stack expertise",
     description:
-      "We act like founders of every system we touch. We measure ourselves by outcomes shipped, not hours billed.",
-    icon: GitBranch,
+      "Frontend, backend, mobile, smart contracts, and cloud — end-to-end ownership, no hand-offs.",
+    icon: Layers,
+  },
+  {
+    title: "On-time delivery",
+    description:
+      "Clear milestones and tight iterations. We commit to dates and we hit them.",
+    icon: Clock,
+  },
+  {
+    title: "Post-launch support",
+    description:
+      "AMC packages, monitoring, and rapid fixes keep your product fast, secure, and online.",
+    icon: LifeBuoy,
   },
 ];
 
@@ -277,28 +348,28 @@ export const process: ProcessStep[] = [
     number: "01",
     title: "Discover",
     description:
-      "We immerse in your domain, map constraints and risks, and define what success measurably looks like before a line of code is written.",
+      "We learn your business, users, and goals, then define scope, timeline, and success metrics — in writing, before we build.",
     icon: Compass,
   },
   {
     number: "02",
-    title: "Architect",
+    title: "Design",
     description:
-      "We design the system — data models, security boundaries, scale targets — and pressure-test the architecture against your hardest requirements.",
+      "Figma wireframes and prototypes turn the plan into a clickable experience you can review before a line of code is written.",
     icon: PenTool,
   },
   {
     number: "03",
-    title: "Engineer",
+    title: "Develop",
     description:
-      "Senior teams build in tight iterations with rigorous review, automated testing, and continuous delivery from day one.",
+      "We build in tight, reviewed iterations with automated testing and continuous delivery — you see progress every week.",
     icon: Cpu,
   },
   {
     number: "04",
-    title: "Launch & Scale",
+    title: "Launch & Support",
     description:
-      "We ship to production, instrument everything, and stay accountable for reliability, performance, and the roadmap ahead.",
+      "We deploy, monitor, and stay on — with maintenance, optimisation, and a roadmap for what's next.",
     icon: Rocket,
   },
 ];
@@ -306,58 +377,90 @@ export const process: ProcessStep[] = [
 /* ------------------------------------------------------------------ */
 /*  Stats                                                             */
 /* ------------------------------------------------------------------ */
-export type Stat = { value: number; suffix?: string; prefix?: string; label: string; decimals?: number };
+export type Stat = {
+  value: number;
+  suffix?: string;
+  prefix?: string;
+  label: string;
+  decimals?: number;
+};
 
 export const stats: Stat[] = [
-  { value: 6, suffix: "+", label: "Industries served" },
-  { value: 99.99, suffix: "%", label: "Platform uptime", decimals: 2 },
-  { value: 10, suffix: "B+", label: "Events processed daily" },
-  { value: 24, suffix: "/7", label: "Mission support" },
+  { value: 30, suffix: "+", label: "Projects delivered" },
+  { value: 15, suffix: "+", label: "Happy clients" },
+  { value: 1, suffix: "+", label: "Years of experience" },
+  { value: 8, suffix: "+", label: "Blockchain projects" },
 ];
 
 /* ------------------------------------------------------------------ */
-/*  Industries (marquee + global reach)                              */
+/*  Target audience (marquee / trust bar)                            */
 /* ------------------------------------------------------------------ */
 export const industries: string[] = [
-  "Government",
-  "Telecommunications",
-  "Enterprise",
-  "Financial Infrastructure",
-  "Defense & Security",
-  "Data Intelligence",
   "Startups",
-  "Technology Partners",
+  "SMEs",
+  "Enterprises",
+  "Web3 Projects",
+  "Entrepreneurs",
+  "E-Commerce",
+  "Agencies",
+  "Global Clients",
 ];
 
 /* ------------------------------------------------------------------ */
-/*  Capabilities (bento / tech)                                      */
+/*  Technology stack (ticker)                                        */
 /* ------------------------------------------------------------------ */
-export type Capability = { title: string; description: string; icon: LucideIcon };
+export const techStack: string[] = [
+  "React",
+  "Next.js",
+  "Vue.js",
+  "Node.js",
+  "Python",
+  "Laravel",
+  "React Native",
+  "Flutter",
+  "Solidity",
+  "Ethereum",
+  "Polygon",
+  "Solana",
+  "PostgreSQL",
+  "MongoDB",
+  "Firebase",
+  "GraphQL",
+  "AWS",
+  "Docker",
+];
 
-export const capabilities: Capability[] = [
+/* ------------------------------------------------------------------ */
+/*  Testimonials                                                      */
+/* ------------------------------------------------------------------ */
+export type Testimonial = {
+  quote: string;
+  name: string;
+  role: string;
+  rating: number;
+};
+
+export const testimonials: Testimonial[] = [
   {
-    title: "Security-first engineering",
-    description:
-      "Zero-trust architecture, encryption by default, and tamper-evident auditing built into every system.",
-    icon: ShieldCheck,
+    quote:
+      "Lunar Global took our idea from a rough Figma to a live SaaS product in weeks. The communication was constant and the code quality is excellent.",
+    name: "Aarav Mehta",
+    role: "Founder, SaaS Startup",
+    rating: 5,
   },
   {
-    title: "Built for national scale",
-    description:
-      "Architectures proven against billions of daily events and millions of users without degrading.",
-    icon: Network,
+    quote:
+      "They built and audited our staking platform end to end. Genuine Web3 expertise — rare to find a team that handles both contracts and a polished frontend.",
+    name: "Daniel Fischer",
+    role: "Product Lead, DeFi Project",
+    rating: 5,
   },
   {
-    title: "Composable platforms",
-    description:
-      "Modular services and clean APIs that let your teams build on top of what we deliver.",
-    icon: Layers,
-  },
-  {
-    title: "Applied intelligence",
-    description:
-      "Machine learning embedded where it creates measurable operational advantage — not as a buzzword.",
-    icon: Cpu,
+    quote:
+      "Our website's traffic and speed both jumped after the rebuild. On time, on budget, and they still support us months later.",
+    name: "Priya Nair",
+    role: "Marketing Head, Enterprise",
+    rating: 5,
   },
 ];
 
@@ -369,39 +472,39 @@ export type Principle = { quote: string; name: string; title: string };
 export const principles: Principle[] = [
   {
     quote:
-      "We treat reliability as a feature, not an afterthought. If it can't run unattended at 3 a.m., it isn't finished.",
+      "We treat reliability as a feature, not an afterthought. If it can't run unattended, it isn't finished.",
     name: "Reliability",
-    title: "Engineering principle",
+    title: "How we build",
   },
   {
     quote:
-      "Security and auditability are designed in from the first commit. You can't bolt trust onto a system later.",
+      "Security and audits are part of the build from day one — you can't bolt trust onto a product later.",
     name: "Trust by design",
-    title: "Engineering principle",
+    title: "How we build",
   },
   {
     quote:
-      "Simplicity scales. We resist complexity until the problem genuinely demands it — then we contain it cleanly.",
+      "Simplicity scales. We resist complexity until the problem genuinely demands it, then contain it cleanly.",
     name: "Essential simplicity",
-    title: "Engineering principle",
+    title: "How we build",
   },
   {
     quote:
-      "We ship in tight loops with real users and real data, because the only review that matters is production.",
+      "We ship in tight loops with real users and real data — the only review that matters is production.",
     name: "Ship to learn",
-    title: "Engineering principle",
+    title: "How we build",
   },
   {
     quote:
-      "We own outcomes end to end. The handoff is not the finish line — the system performing in the field is.",
+      "We own outcomes end to end. The handoff isn't the finish line — your product performing in the field is.",
     name: "Total ownership",
-    title: "Engineering principle",
+    title: "How we build",
   },
   {
     quote:
       "Performance is a discipline. Every millisecond and every byte is accounted for, measured, and defended.",
     name: "Measured performance",
-    title: "Engineering principle",
+    title: "How we build",
   },
 ];
 
@@ -410,19 +513,19 @@ export const principles: Principle[] = [
 /* ------------------------------------------------------------------ */
 export const faqs: { q: string; a: string }[] = [
   {
-    q: "What kinds of organizations do you work with?",
-    a: "Governments, enterprises, telecom operators, and ambitious startups. We specialize in complex, high-stakes systems where correctness, security, and scale are non-negotiable.",
+    q: "What kinds of projects do you take on?",
+    a: "Everything from corporate websites, e-commerce, and SaaS platforms to mobile apps, smart contracts, DeFi/NFT platforms, and full product builds. If it's digital, we likely build it.",
   },
   {
-    q: "How do engagements typically start?",
-    a: "Most begin with a short discovery phase where we map your problem, constraints, and success metrics. From there we propose an architecture and a phased delivery plan.",
+    q: "Do you work with clients outside India?",
+    a: "Yes. We're based in India and work with clients globally across time zones, communicating in clear, regular updates throughout the project.",
   },
   {
-    q: "Can you work within strict security and compliance requirements?",
-    a: "Yes. Security, auditability, and access control are core to how we build — particularly for government and telecom intelligence systems that operate under strict authorization.",
+    q: "How do projects usually start?",
+    a: "With a short discovery call to understand your goals, scope, and timeline. From there we send a clear proposal with milestones and transparent pricing before any work begins.",
   },
   {
-    q: "Do you support what you build after launch?",
-    a: "Always. We instrument everything we ship and stay accountable for reliability, performance, and the roadmap — with 24/7 support for mission-critical platforms.",
+    q: "Do you provide support after launch?",
+    a: "Always. We offer monthly and quarterly AMC packages covering monitoring, bug fixes, security patches, and improvements — plus 30 days of post-launch fixes at no extra cost.",
   },
 ];

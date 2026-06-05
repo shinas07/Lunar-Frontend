@@ -187,8 +187,8 @@ function Moon() {
           roughness={0.92}
         />
       </mesh>
-      <Atmosphere color="#4da6ff" power={3} intensity={1.15} />
-      <Atmosphere color="#8b5cf6" power={6} intensity={0.5} />
+      <Atmosphere color="#00c2ff" power={3.5} intensity={0.75} />
+      <Atmosphere color="#14a8cf" power={6} intensity={0.32} />
     </group>
   );
 }
@@ -196,17 +196,17 @@ function Moon() {
 export default function MoonScene() {
   return (
     <Canvas
-      camera={{ position: [0, 0, 5], fov: 34 }}
+      camera={{ position: [0, 0, 8.5], fov: 30 }}
       dpr={[1, 1.6]}
       gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
       style={{ background: "transparent" }}
     >
-      <ambientLight intensity={0.35} />
+      <ambientLight intensity={0.4} />
       {/* Key light — warm-cool sunlight from upper right */}
-      <directionalLight position={[4, 3, 5]} intensity={2.4} color="#dfe9ff" />
+      <directionalLight position={[4, 3, 5]} intensity={2.6} color="#dfe9ff" />
       {/* Accent rim lights */}
-      <pointLight position={[-5, -1, 2]} intensity={28} color="#8b5cf6" />
-      <pointLight position={[5, 2, 3]} intensity={18} color="#4da6ff" />
+      <pointLight position={[-5, -1, 2]} intensity={28} color="#14a8cf" />
+      <pointLight position={[5, 2, 3]} intensity={18} color="#00c2ff" />
 
       <Float speed={1.1} rotationIntensity={0.18} floatIntensity={0.55}>
         <Moon />

@@ -32,7 +32,7 @@ export default function OpengraphImage() {
             borderRadius: "50%",
             background:
               "radial-gradient(circle at 35% 30%, #2a3b63, #0a1224 60%, #05060a 100%)",
-            boxShadow: "0 0 160px 40px rgba(77,166,255,0.25)",
+            boxShadow: "0 0 160px 40px rgba(0,194,255,0.25)",
             display: "flex",
           }}
         />
@@ -42,12 +42,12 @@ export default function OpengraphImage() {
               width: 44,
               height: 44,
               borderRadius: 12,
-              background: "linear-gradient(135deg, #7cc0ff, #4da6ff 50%, #8b5cf6)",
+              background: "linear-gradient(135deg, #5fd9ff, #00c2ff 50%, #14a8cf)",
               display: "flex",
             }}
           />
-          <div style={{ color: "#eef2fb", fontSize: 34, fontWeight: 600, display: "flex" }}>
-            Lunar
+          <div style={{ color: "#eef2fb", fontSize: 32, fontWeight: 600, display: "flex" }}>
+            Lunar Global Technologies
           </div>
         </div>
 
@@ -63,10 +63,10 @@ export default function OpengraphImage() {
               display: "flex",
             }}
           >
-            Software for the next frontier.
+            Building the future — Web2, Web3 & beyond.
           </div>
-          <div style={{ color: "#8b94ac", fontSize: 30, maxWidth: 760, display: "flex" }}>
-            Mission-critical engineering for governments, enterprises, and telecom.
+          <div style={{ color: "#8b94ac", fontSize: 30, maxWidth: 780, display: "flex" }}>
+            Websites, mobile apps, blockchain & DeFi — built end to end.
           </div>
         </div>
 
@@ -74,7 +74,7 @@ export default function OpengraphImage() {
           style={{
             display: "flex",
             gap: 14,
-            color: "#7cc0ff",
+            color: "#5fd9ff",
             fontSize: 22,
             letterSpacing: "0.12em",
             textTransform: "uppercase",

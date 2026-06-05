@@ -34,7 +34,7 @@ export function Moon3D({ className }: { className?: string }) {
       {/* Glow that sits behind both the 3D and CSS versions */}
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 rounded-full bg-[radial-gradient(circle,rgba(77,166,255,0.28),rgba(139,92,246,0.10)_45%,transparent_70%)] blur-3xl"
+        className="absolute inset-0 -z-10 rounded-full bg-[radial-gradient(circle,rgba(0,194,255,0.28),rgba(20,168,207,0.10)_45%,transparent_70%)] blur-3xl"
       />
       {useFallback ? <CssMoon className="h-full w-full" /> : <MoonScene />}
     </div>

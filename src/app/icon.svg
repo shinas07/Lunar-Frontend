@@ -6,12 +6,12 @@
     </linearGradient>
     <linearGradient id="moon" x1="14" y1="12" x2="50" y2="52" gradientUnits="userSpaceOnUse">
       <stop stop-color="#9fd0ff"/>
-      <stop offset="0.55" stop-color="#4da6ff"/>
-      <stop offset="1" stop-color="#8b5cf6"/>
+      <stop offset="0.55" stop-color="#00c2ff"/>
+      <stop offset="1" stop-color="#14a8cf"/>
     </linearGradient>
   </defs>
   <rect width="64" height="64" rx="15" fill="url(#bg)"/>
-  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="14.25" stroke="#4da6ff" stroke-opacity="0.22" stroke-width="1.5"/>
+  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="14.25" stroke="#00c2ff" stroke-opacity="0.22" stroke-width="1.5"/>
   <!-- crescent: full moon minus an offset disc the colour of the background -->
   <circle cx="30" cy="33" r="17" fill="url(#moon)"/>
   <circle cx="38" cy="27" r="15" fill="#070a14"/>

@@ -1,11 +1,11 @@
 "use client";
 
-import { useMemo, useRef } from "react";
+import { Suspense, useMemo, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, Line } from "@react-three/drei";
+import { OrbitControls, Line, useTexture } from "@react-three/drei";
 import * as THREE from "three";
 
-const RADIUS = 1.6;
+const RADIUS = 1.5;
 
 /** Deterministic PRNG (mulberry32) — stable across renders & SSR. */
 function mulberry32(seed: number) {
@@ -34,114 +34,101 @@ function fibonacciSphere(samples: number, radius: number) {
   return points;
 }
 
-function Nodes() {
-  const points = useMemo(() => fibonacciSphere(700, RADIUS), []);
-  const geometry = useMemo(() => {
-    const g = new THREE.BufferGeometry().setFromPoints(points);
-    return g;
-  }, [points]);
+type ArcData = {
+  curve: THREE.QuadraticBezierCurve3;
+  points: THREE.Vector3[];
+  color: string;
+  speed: number;
+  offset: number;
+};
 
-  return (
-    <points geometry={geometry}>
-      <pointsMaterial
-        size={0.022}
-        color="#7cc0ff"
-        transparent
-        opacity={0.85}
-        sizeAttenuation
-        depthWrite={false}
-      />
-    </points>
-  );
+function buildArcs(): ArcData[] {
+  const nodes = fibonacciSphere(950, RADIUS);
+  const rng = mulberry32(20240711);
+  const palette = ["#00c2ff", "#4fd3ec", "#38e0d0"];
+  const arcs: ArcData[] = [];
+  for (let i = 0; i < 10; i++) {
+    const a = nodes[Math.floor(rng() * nodes.length)];
+    const b = nodes[Math.floor(rng() * nodes.length)];
+    const mid = a.clone().add(b).multiplyScalar(0.5);
+    const lift = 1 + 0.5 * (a.distanceTo(b) / (RADIUS * 2));
+    mid.normalize().multiplyScalar(RADIUS * lift);
+    const curve = new THREE.QuadraticBezierCurve3(a, mid, b);
+    arcs.push({
+      curve,
+      points: curve.getPoints(60),
+      color: palette[i % palette.length],
+      speed: 0.16 + rng() * 0.2,
+      offset: rng(),
+    });
+  }
+  return arcs;
 }
 
-function Arc({ start, end, color }: { start: THREE.Vector3; end: THREE.Vector3; color: string }) {
-  const points = useMemo(() => {
-    const mid = start.clone().add(end).multiplyScalar(0.5);
-    const lift = 1 + 0.45 * (start.distanceTo(end) / (RADIUS * 2));
-    mid.normalize().multiplyScalar(RADIUS * lift);
-    const curve = new THREE.QuadraticBezierCurve3(start, mid, end);
-    return curve.getPoints(50);
-  }, [start, end]);
-
-  return <Line points={points} color={color} lineWidth={1.1} transparent opacity={0.55} />;
+/** A glowing dot of light travelling along an arc — the "data in transit". */
+function Pulse({ curve, color, speed, offset }: ArcData) {
+  const ref = useRef<THREE.Mesh>(null);
+  const v = useMemo(() => new THREE.Vector3(), []);
+  useFrame((state) => {
+    if (!ref.current) return;
+    const t = (state.clock.elapsedTime * speed + offset) % 1;
+    curve.getPoint(t, v);
+    ref.current.position.copy(v);
+    const s = 0.6 + Math.sin(t * Math.PI) * 0.8; // fade in/out along the path
+    ref.current.scale.setScalar(s);
+  });
+  return (
+    <mesh ref={ref}>
+      <sphereGeometry args={[0.022, 12, 12]} />
+      <meshBasicMaterial color={color} />
+    </mesh>
+  );
 }
 
 function Arcs() {
-  const nodes = useMemo(() => fibonacciSphere(700, RADIUS), []);
-  const arcs = useMemo(() => {
-    const rng = mulberry32(20240711);
-    const pairs: { start: THREE.Vector3; end: THREE.Vector3; color: string }[] = [];
-    const palette = ["#4da6ff", "#a98bff", "#38e0d0"];
-    for (let i = 0; i < 7; i++) {
-      const a = nodes[Math.floor(rng() * nodes.length)];
-      const b = nodes[Math.floor(rng() * nodes.length)];
-      pairs.push({ start: a, end: b, color: palette[i % palette.length] });
-    }
-    return pairs;
-  }, [nodes]);
-
+  const arcs = useMemo(() => buildArcs(), []);
   return (
     <>
       {arcs.map((arc, i) => (
-        <Arc key={i} {...arc} />
+        <group key={i}>
+          <Line points={arc.points} color={arc.color} lineWidth={1.1} transparent opacity={0.5} />
+          <Pulse {...arc} />
+        </group>
       ))}
     </>
   );
 }
 
-function Markers() {
-  const markers = useMemo(() => {
-    const all = fibonacciSphere(700, RADIUS);
-    const rng = mulberry32(81735);
-    return Array.from({ length: 9 }, () => all[Math.floor(rng() * all.length)]);
-  }, []);
-
+/** Night-lights earth with a glossy sheen — the surface beneath the arcs. */
+function Earth() {
+  const [nightMap, bumpMap] = useTexture([
+    "/textures/earth-night.jpg",
+    "/textures/earth-topology.png",
+  ]);
   return (
-    <>
-      {markers.map((m, i) => (
-        <mesh key={i} position={m}>
-          <sphereGeometry args={[0.03, 12, 12]} />
-          <meshBasicMaterial color="#ffffff" />
-        </mesh>
-      ))}
-    </>
+    <mesh>
+      <sphereGeometry args={[RADIUS, 128, 128]} />
+      <meshStandardMaterial
+        map={nightMap}
+        map-colorSpace={THREE.SRGBColorSpace}
+        map-anisotropy={8}
+        emissiveMap={nightMap}
+        emissive={new THREE.Color("#cfe0ff")}
+        emissiveIntensity={1.35}
+        bumpMap={bumpMap}
+        bumpScale={0.04}
+        roughness={0.58}
+        metalness={0.22}
+      />
+    </mesh>
   );
 }
 
-function Globe() {
-  const group = useRef<THREE.Group>(null);
-
-  useFrame((_, delta) => {
-    if (group.current) group.current.rotation.y += delta * 0.06;
-  });
-
+function GlobeGroup() {
   return (
-    <group ref={group} rotation={[0.35, 0, 0.18]}>
-      {/* Core sphere */}
-      <mesh>
-        <sphereGeometry args={[RADIUS * 0.985, 48, 48]} />
-        <meshStandardMaterial
-          color="#070b16"
-          emissive="#0a1733"
-          emissiveIntensity={0.4}
-          roughness={0.9}
-          metalness={0.1}
-        />
-      </mesh>
-      {/* Wireframe shell */}
-      <mesh>
-        <sphereGeometry args={[RADIUS * 0.99, 24, 24]} />
-        <meshBasicMaterial color="#1f3a66" wireframe transparent opacity={0.35} />
-      </mesh>
-      <Nodes />
+    <group rotation={[0.32, 0, 0.16]}>
+      <Earth />
       <Arcs />
-      <Markers />
-      {/* Atmosphere */}
-      <mesh scale={1.18}>
-        <sphereGeometry args={[RADIUS, 48, 48]} />
-        <meshBasicMaterial color="#4da6ff" transparent opacity={0.05} side={THREE.BackSide} />
-      </mesh>
     </group>
   );
 }
@@ -149,20 +136,23 @@ function Globe() {
 export default function GlobeScene() {
   return (
     <Canvas
-      camera={{ position: [0, 0, 5], fov: 38 }}
-      dpr={[1, 2]}
-      gl={{ antialias: true, alpha: true }}
+      camera={{ position: [0, 0, 8.6], fov: 30 }}
+      dpr={[1, 1.8]}
+      gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
       style={{ background: "transparent" }}
     >
-      <ambientLight intensity={0.6} />
-      <pointLight position={[5, 3, 5]} intensity={40} color="#4da6ff" />
-      <pointLight position={[-5, -2, -5]} intensity={25} color="#8b5cf6" />
-      <Globe />
+      <ambientLight intensity={0.45} />
+      {/* Key light — the bright spot gives the glassy, shiny highlight */}
+      <directionalLight position={[5, 3, 5]} intensity={2.2} color="#eaf2ff" />
+      <pointLight position={[-5, -2, -4]} intensity={16} color="#1f9fd0" />
+      <Suspense fallback={null}>
+        <GlobeGroup />
+      </Suspense>
       <OrbitControls
         enableZoom={false}
         enablePan={false}
         autoRotate
-        autoRotateSpeed={0.4}
+        autoRotateSpeed={0.45}
         rotateSpeed={0.4}
         minPolarAngle={Math.PI / 3}
         maxPolarAngle={Math.PI / 1.6}

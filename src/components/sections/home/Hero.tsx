@@ -4,12 +4,19 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, ArrowDown } from "lucide-react";
 import { Starfield } from "@/components/ui/Starfield";
-import { Moon3D } from "@/components/ui/moon3d/Moon3D";
+import { EarthGlobe } from "@/components/ui/globe3d/EarthGlobe";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 import { Magnetic } from "@/components/ui/Magnetic";
+import { RotatingText } from "@/components/ui/RotatingText";
 
-const headline = ["Software", "for", "the", "next", "frontier."];
+const headline = ["Building", "the", "future", "—", "Web2,", "Web3", "&", "beyond."];
+const rotatingWords = [
+  "web applications",
+  "blockchain & DeFi platforms",
+  "mobile apps",
+  "crypto solutions",
+];
 
 export function Hero() {
   const ref = useRef<HTMLElement>(null);
@@ -30,7 +37,7 @@ export function Hero() {
       <Starfield className="z-0" />
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-0 bg-[radial-gradient(ellipse_at_50%_-10%,rgba(77,166,255,0.16),transparent_55%)]"
+        className="pointer-events-none absolute inset-0 -z-0 bg-[radial-gradient(ellipse_at_50%_-10%,rgba(0,194,255,0.16),transparent_55%)]"
       />
       <div
         aria-hidden
@@ -42,7 +49,7 @@ export function Hero() {
         style={{ y: yMoon, opacity }}
         className="pointer-events-none absolute left-1/2 top-[8%] -z-0 w-[78vw] max-w-[640px] -translate-x-1/2 md:left-[68%] md:top-1/2 md:w-[42vw] md:-translate-y-1/2"
       >
-        <Moon3D className="w-full" />
+        <EarthGlobe className="w-full" />
       </motion.div>
 
       {/* Content */}
@@ -56,10 +63,10 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
-            <Eyebrow>Product Engineering Studio</Eyebrow>
+            <Eyebrow>Full-service technology studio</Eyebrow>
           </motion.div>
 
-          <h1 className="mt-6 font-display text-[clamp(3rem,8.4vw,7.5rem)] font-semibold leading-[0.9] tracking-[-0.03em] text-cloud">
+          <h1 className="mt-6 font-display text-[clamp(2.2rem,6vw,5.2rem)] font-semibold leading-[0.95] tracking-[-0.03em] text-cloud">
             {headline.map((word, i) => (
               <span key={i} className="mr-[0.25em] inline-block overflow-hidden align-bottom">
                 <motion.span
@@ -68,25 +75,36 @@ export function Hero() {
                   animate={{ y: 0 }}
                   transition={{
                     duration: 0.9,
-                    delay: 0.15 + i * 0.08,
+                    delay: 0.15 + i * 0.07,
                     ease: [0.16, 1, 0.3, 1],
                   }}
                 >
-                  {i >= 3 ? <span className="text-gradient">{word}</span> : word}
+                  {i >= 4 ? <span className="text-gradient">{word}</span> : word}
                 </motion.span>
               </span>
             ))}
           </h1>
 
+          {/* Rotating capability line */}
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-7 max-w-xl text-pretty text-lg leading-relaxed text-haze sm:text-xl"
+            transition={{ duration: 0.8, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
+            className="mt-5 flex flex-wrap items-baseline gap-x-2 font-display text-xl font-medium text-haze sm:text-2xl"
           >
-            Lunar engineers mission-critical software for governments, enterprises,
-            and telecom operators — from blockchain infrastructure to telecom
-            intelligence platforms.
+            <span>We design &amp; build</span>
+            <RotatingText words={rotatingWords} className="font-semibold text-gradient-electric" />
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.65, ease: [0.16, 1, 0.3, 1] }}
+            className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-haze"
+          >
+            Lunar Global Technologies designs, develops, and delivers world-class
+            digital products — from websites and mobile apps to blockchain
+            solutions and DeFi platforms — for clients in India and across the globe.
           </motion.p>
 
           <motion.div
@@ -96,13 +114,13 @@ export function Hero() {
             className="mt-10 flex flex-wrap items-center gap-4"
           >
             <Magnetic>
-              <Button href="/contact" size="lg">
-                Start a project
+              <Button href="/services" size="lg">
+                Explore our services
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </Magnetic>
-            <Button href="/projects" size="lg" variant="secondary">
-              Explore our work
+            <Button href="/contact" size="lg" variant="secondary">
+              Talk to us
             </Button>
           </motion.div>
         </div>

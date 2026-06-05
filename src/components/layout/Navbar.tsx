@@ -78,7 +78,7 @@ export function Navbar() {
 
           <div className="hidden md:block">
             <Button href="/contact" size="sm">
-              Start a project
+              Get a Free Quote
             </Button>
           </div>
 
@@ -132,7 +132,7 @@ export function Navbar() {
                   className="w-full"
                   onClick={() => setOpen(false)}
                 >
-                  Start a project
+                  Get a Free Quote
                 </Button>
               </motion.div>
             </div>

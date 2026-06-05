@@ -15,8 +15,8 @@ export function Logo({
     <span className={cn("inline-flex items-center gap-2.5", className)}>
       <LogoMark className="h-7 w-7" />
       {showWord && (
-        <span className="font-display text-[1.35rem] font-semibold tracking-tight text-cloud">
-          Lunar
+        <span className="font-display text-[1.3rem] font-semibold tracking-tight text-cloud">
+          Lunar <span className="text-mist">Global</span>
         </span>
       )}
     </span>
@@ -34,13 +34,13 @@ export function LogoMark({ className }: { className?: string }) {
     >
       <defs>
         <linearGradient id="lunar-mark" x1="6" y1="4" x2="34" y2="36" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#7cc0ff" />
-          <stop offset="0.5" stopColor="#4da6ff" />
-          <stop offset="1" stopColor="#8b5cf6" />
+          <stop stopColor="#5fd9ff" />
+          <stop offset="0.5" stopColor="#00c2ff" />
+          <stop offset="1" stopColor="#14a8cf" />
         </linearGradient>
         <radialGradient id="lunar-glow" cx="0.5" cy="0.5" r="0.5">
-          <stop stopColor="#4da6ff" stopOpacity="0.55" />
-          <stop offset="1" stopColor="#4da6ff" stopOpacity="0" />
+          <stop stopColor="#00c2ff" stopOpacity="0.55" />
+          <stop offset="1" stopColor="#00c2ff" stopOpacity="0" />
         </radialGradient>
       </defs>
       <circle cx="20" cy="20" r="19" fill="url(#lunar-glow)" />

@@ -9,8 +9,8 @@ export function GlowOrb({
   color?: "electric" | "violet" | "aqua";
 }) {
   const colors = {
-    electric: "rgba(77,166,255,0.22)",
-    violet: "rgba(139,92,246,0.20)",
+    electric: "rgba(0,194,255,0.22)",
+    violet: "rgba(20,168,207,0.20)",
     aqua: "rgba(56,224,208,0.16)",
   } as const;
 

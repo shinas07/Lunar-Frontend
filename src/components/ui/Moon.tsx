@@ -16,7 +16,7 @@ export function Moon({ className }: { className?: string }) {
       transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1] }}
     >
       {/* Outer glow */}
-      <div className="absolute inset-0 -z-10 rounded-full bg-[radial-gradient(circle,rgba(77,166,255,0.35),rgba(139,92,246,0.12)_45%,transparent_70%)] blur-3xl" />
+      <div className="absolute inset-0 -z-10 rounded-full bg-[radial-gradient(circle,rgba(0,194,255,0.35),rgba(20,168,207,0.12)_45%,transparent_70%)] blur-3xl" />
 
       {/* Orbit rings */}
       <div className="absolute inset-[-14%] animate-spin-slow rounded-full border border-electric/10" />
@@ -29,11 +29,11 @@ export function Moon({ className }: { className?: string }) {
           background:
             "radial-gradient(circle at 32% 28%, #2a3b63 0%, #131c34 38%, #080d1c 70%, #04060e 100%)",
           boxShadow:
-            "inset -28px -28px 80px rgba(0,0,0,0.85), inset 26px 26px 70px rgba(77,166,255,0.18), 0 0 90px rgba(77,166,255,0.18)",
+            "inset -28px -28px 80px rgba(0,0,0,0.85), inset 26px 26px 70px rgba(0,194,255,0.18), 0 0 90px rgba(0,194,255,0.18)",
         }}
       >
         {/* Terminator highlight */}
-        <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_30%_26%,rgba(124,192,255,0.4),transparent_42%)]" />
+        <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_30%_26%,rgba(95,217,255,0.4),transparent_42%)]" />
 
         {/* Craters */}
         <Crater className="left-[24%] top-[34%] h-[12%] w-[12%]" />
@@ -56,7 +56,7 @@ function Crater({ className }: { className?: string }) {
       style={{
         background:
           "radial-gradient(circle at 38% 32%, rgba(0,0,0,0.55), rgba(255,255,255,0.04) 70%, transparent)",
-        boxShadow: "inset 2px 2px 5px rgba(0,0,0,0.6), inset -1px -1px 3px rgba(124,192,255,0.12)",
+        boxShadow: "inset 2px 2px 5px rgba(0,0,0,0.6), inset -1px -1px 3px rgba(95,217,255,0.12)",
       }}
     />
   );

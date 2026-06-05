@@ -9,16 +9,16 @@ import { cn } from "@/lib/utils";
 type Status = "idle" | "submitting" | "success" | "error";
 
 const serviceOptions = [
-  "Blockchain Development",
-  "Telecom Intelligence Systems",
-  "Enterprise Software",
-  "Product Engineering",
-  "Cloud Solutions",
-  "Data Platforms",
-  "Not sure yet",
+  "Web Development",
+  "Web3 / Blockchain",
+  "Mobile App",
+  "Product Development",
+  "Crypto Solutions",
+  "Maintenance & Support",
+  "Other",
 ];
 
-const budgetOptions = ["< $50k", "$50k – $150k", "$150k – $500k", "$500k+", "Let's discuss"];
+const budgetOptions = ["Below ₹1L", "₹1–5L", "₹5–20L", "₹20L+", "Not sure"];
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -111,20 +111,29 @@ export function ContactForm() {
             className={inputCls(!!errors.name)}
           />
         </Field>
-        <Field label="Work email" error={errors.email} required>
+        <Field label="Email address" error={errors.email} required>
           <input
             name="email"
             type="email"
             required
-            placeholder="jane@company.com"
+            placeholder="you@company.com"
             className={inputCls(!!errors.email)}
+          />
+        </Field>
+        <Field label="Phone number" error={errors.phone} required>
+          <input
+            name="phone"
+            type="tel"
+            required
+            placeholder="+91 98765 43210"
+            className={inputCls(!!errors.phone)}
           />
         </Field>
         <Field label="Company / Organization">
           <input
             name="company"
             type="text"
-            placeholder="Acme Corp"
+            placeholder="Your company"
             className={inputCls(false)}
           />
         </Field>
@@ -164,12 +173,11 @@ export function ContactForm() {
       </div>
 
       <div className="mt-5">
-        <Field label="Tell us about your project" error={errors.message} required>
+        <Field label="Message / Requirements" error={errors.message}>
           <textarea
             name="message"
-            required
             rows={5}
-            placeholder="What are you building, what problem are you solving, and what does success look like?"
+            placeholder="Tell us about your project..."
             className={cn(inputCls(!!errors.message), "resize-none")}
           />
         </Field>

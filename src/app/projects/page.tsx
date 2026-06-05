@@ -10,11 +10,11 @@ import { Sparkles } from "lucide-react";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Selected work from Lunar across blockchain, telecommunications, enterprise, and data platforms — engineered for correctness, security, and scale.",
+    "Portfolio of Lunar Global Technologies — websites, web apps, mobile apps, and Web3/blockchain products built for clients in India and worldwide.",
   alternates: { canonical: "/projects" },
 };
 
-const sectors = ["All", "Blockchain", "Telecommunications", "Government & Enterprise", "Data Platforms"];
+const sectors = ["All", "Web Development", "Web3 & Blockchain", "Mobile Apps", "Crypto Solutions"];
 
 export default function ProjectsPage() {
   return (
@@ -65,9 +65,8 @@ export default function ProjectsPage() {
                   More case studies on the way
                 </h3>
                 <p className="mt-1 max-w-xl text-pretty text-sm leading-relaxed text-mist">
-                  We&apos;re actively building telecom intelligence and next-generation
-                  blockchain platforms. Detailed case studies will be published as
-                  they move into production.
+                  We&apos;re always shipping new web, mobile, and Web3 products.
+                  Detailed case studies are added here as projects go live.
                 </p>
               </div>
             </div>

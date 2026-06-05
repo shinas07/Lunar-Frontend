@@ -5,7 +5,7 @@ export function TrustBar() {
   return (
     <div className="relative border-y border-line bg-ink-2/60 py-7">
       <p className="container-px mx-auto mb-6 max-w-7xl text-center font-mono text-xs uppercase tracking-[0.22em] text-faint">
-        Trusted across regulated, high-stakes industries
+        Trusted by startups, enterprises &amp; Web3 teams worldwide
       </p>
       <Marquee duration="38s">
         {industries.map((name) => (

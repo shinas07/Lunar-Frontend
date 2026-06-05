@@ -5,15 +5,15 @@ import { cn } from "@/lib/utils";
 import type { Project } from "@/lib/data";
 
 const accentMap = {
-  electric: { glow: "rgba(77,166,255,0.16)", text: "text-electric", from: "from-electric/20" },
-  violet: { glow: "rgba(139,92,246,0.16)", text: "text-violet-bright", from: "from-violet/20" },
+  electric: { glow: "rgba(0,194,255,0.16)", text: "text-electric", from: "from-electric/20" },
+  violet: { glow: "rgba(20,168,207,0.16)", text: "text-violet-bright", from: "from-violet/20" },
   aqua: { glow: "rgba(56,224,208,0.14)", text: "text-aqua", from: "from-aqua/20" },
 } as const;
 
 const statusStyle: Record<Project["status"], string> = {
-  "In Production": "border-emerald-400/30 bg-emerald-400/10 text-emerald-300",
-  "In Development": "border-amber-400/30 bg-amber-400/10 text-amber-300",
-  "Case Study": "border-electric/30 bg-electric/10 text-electric",
+  Live: "border-emerald-400/30 bg-emerald-400/10 text-emerald-300",
+  "In Progress": "border-amber-400/30 bg-amber-400/10 text-amber-300",
+  Completed: "border-electric/30 bg-electric/10 text-electric",
 };
 
 export function ProjectCard({ project }: { project: Project }) {

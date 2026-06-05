@@ -19,11 +19,11 @@ export function CTA({
         <Starfield className="opacity-70" shooting={false} />
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(77,166,255,0.22),transparent_60%)]"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(0,194,255,0.22),transparent_60%)]"
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute -bottom-32 left-1/2 h-72 w-[36rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(139,92,246,0.25),transparent_70%)] blur-3xl"
+          className="pointer-events-none absolute -bottom-32 left-1/2 h-72 w-[36rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(20,168,207,0.25),transparent_70%)] blur-3xl"
         />
 
         <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center">

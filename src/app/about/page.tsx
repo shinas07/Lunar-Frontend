@@ -8,31 +8,32 @@ import { Moon } from "@/components/ui/Moon";
 import { PageHeader } from "@/components/sections/shared/PageHeader";
 import { CTA } from "@/components/sections/shared/CTA";
 import { values } from "@/lib/data";
+import { site } from "@/lib/site";
 import { Telescope, Target } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Lunar is a product-focused technology company engineering mission-critical software for governments, enterprises, and telecom operators. Learn about our vision, mission, and engineering culture.",
+    "Lunar Global Technologies is a full-service technology company delivering websites, web apps, mobile apps, and Web3/blockchain solutions for clients in India and worldwide. Meet our founder and our values.",
   alternates: { canonical: "/about" },
 };
 
 const culturePillars = [
   {
     title: "Technology-first",
-    body: "We are engineers before anything else. Decisions are driven by what's technically true, not by what's convenient — and every senior voice can challenge an architecture.",
+    body: "We're engineers at heart. Decisions are driven by what's technically right for your product — not by what's quick or convenient.",
+  },
+  {
+    title: "Web2 + Web3 fluency",
+    body: "One team that speaks both worlds. We move naturally between traditional web apps and on-chain systems, so your stack stays coherent.",
   },
   {
     title: "Small teams, deep ownership",
-    body: "We deliberately keep teams small and senior. Fewer hands, more context, and complete ownership from architecture through production support.",
-  },
-  {
-    title: "Bias for the hard problem",
-    body: "We seek out the systems others avoid — regulated, high-throughput, security-critical. The hard problem is where our engineering compounds into advantage.",
+    body: "Lean, senior teams own each project end to end — from architecture and design through deployment and long-term support.",
   },
   {
     title: "Learn in production",
-    body: "Real users and real data are the only honest reviewers. We ship in tight loops, instrument relentlessly, and let production teach us what to build next.",
+    body: "Real users and real data are the only honest reviewers. We ship in tight loops and let production guide what we build next.",
   },
 ];
 
@@ -40,9 +41,9 @@ export default function AboutPage() {
   return (
     <>
       <PageHeader
-        eyebrow="About Lunar"
-        title="We engineer at the frontier."
-        description="Lunar exists to build the software that other companies consider too complex, too critical, or too risky — and to ship it with the rigor those systems demand."
+        eyebrow="About Lunar Global"
+        title="We build the products that move businesses forward."
+        description="Lunar Global Technologies is a full-service technology company delivering end-to-end digital products across Web2, Web3, mobile, and enterprise — for clients in India and around the world."
       />
 
       {/* Vision & Mission */}
@@ -58,15 +59,15 @@ export default function AboutPage() {
                 Our vision
               </h2>
               <p className="mt-4 text-pretty leading-relaxed text-mist">
-                A world where the most important systems — the ones that move money,
-                signal, and decisions — are built with the precision of aerospace and
-                the speed of modern software. We want Lunar to be the team that
-                organizations trust with their hardest engineering.
+                To be the technology partner businesses trust to take any idea —
+                Web2 or Web3, web or mobile — from concept to a launched, scalable
+                product, with the craft of a studio and the reliability of an
+                enterprise team.
               </p>
             </SpotlightCard>
           </Reveal>
           <Reveal delay={0.1}>
-            <SpotlightCard className="h-full p-8 md:p-10" spotlightColor="rgba(139,92,246,0.16)">
+            <SpotlightCard className="h-full p-8 md:p-10" spotlightColor="rgba(20,168,207,0.16)">
               <span className="flex h-12 w-12 items-center justify-center rounded-xl border border-line bg-elevated/60">
                 <Target className="h-6 w-6 text-violet-bright" />
               </span>
@@ -74,10 +75,10 @@ export default function AboutPage() {
                 Our mission
               </h2>
               <p className="mt-4 text-pretty leading-relaxed text-mist">
-                To design, build, and operate complex technology products — blockchain,
-                telecom intelligence, enterprise platforms, and data systems — that are
-                correct, secure, and dependable at scale, and to stand behind every one
-                of them in production.
+                To design, develop, and deliver world-class digital products —
+                websites, web apps, mobile apps, blockchain and DeFi platforms —
+                and to stand behind every one of them long after launch with honest
+                support and transparent partnership.
               </p>
             </SpotlightCard>
           </Reveal>
@@ -89,23 +90,35 @@ export default function AboutPage() {
         <div className="grid items-center gap-12 lg:grid-cols-[1.3fr_1fr]">
           <div>
             <SectionHeading
-              eyebrow="Leadership philosophy"
-              title="The best system wins — not the loudest opinion."
+              eyebrow="Founder's message"
+              title="We treat your product like it's our own."
             />
             <Reveal delay={0.1}>
               <p className="mt-6 max-w-xl text-pretty leading-relaxed text-mist">
-                Leadership at Lunar is technical. We lead by setting the bar on
-                quality, by removing obstacles for engineers, and by taking
-                responsibility when systems are in the field. Titles don&apos;t ship
-                software; clear thinking and accountable teams do.
+                I started Lunar Global Technologies to be the kind of technology
+                partner I always wished existed — one that listens first, quotes
+                honestly, builds with real craft, and is still there long after the
+                product goes live.
               </p>
             </Reveal>
             <Reveal delay={0.2}>
               <p className="mt-4 max-w-xl text-pretty leading-relaxed text-mist">
-                We hire people who would rather be right than comfortable, who
-                care about the user on the other end of the system, and who treat
-                someone else&apos;s mission as their own.
+                Whether you&apos;re a startup chasing an MVP, an enterprise modernising
+                a platform, or a Web3 project launching on-chain, our promise is the
+                same: clear communication, dependable delivery, and a team that
+                genuinely cares about your success.
               </p>
+            </Reveal>
+            <Reveal delay={0.3}>
+              <div className="mt-7 flex items-center gap-4">
+                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-electric to-violet font-display text-base font-semibold text-ink">
+                  RP
+                </span>
+                <div>
+                  <div className="font-medium text-cloud">{site.founder}</div>
+                  <div className="text-sm text-mist">Founder &amp; CEO, Lunar Global Technologies</div>
+                </div>
+              </div>
             </Reveal>
           </div>
           <Reveal direction="none" className="relative mx-auto w-full max-w-sm">

@@ -48,7 +48,7 @@ export function Intro() {
           {/* Ambient glow */}
           <div
             aria-hidden
-            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(77,166,255,0.16),transparent_60%)]"
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(0,194,255,0.16),transparent_60%)]"
           />
 
           <motion.div

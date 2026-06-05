@@ -6,7 +6,7 @@ import { GlowOrb } from "@/components/ui/Backdrop";
 import { stats } from "@/lib/data";
 
 const phrase =
-  "We are a product-focused technology company building complex systems where correctness, security, and scale are non-negotiable.";
+  "We are a full-service technology company that builds, launches, and maintains digital products across Web2, Web3, and mobile.";
 
 export function Overview() {
   const words = phrase.split(" ");
@@ -32,17 +32,17 @@ export function Overview() {
         <div className="flex flex-col justify-center gap-6">
           <Reveal delay={0.1}>
             <p className="text-pretty leading-relaxed text-mist">
-              From distributed ledgers that settle institutional transactions to
-              telecom intelligence platforms operating at national scale, Lunar
-              brings the discipline of enterprise engineering to the frontier of
-              technology. Every system we ship is designed to run unattended,
-              audited, and accountable.
+              From custom websites and SaaS dashboards to mobile apps, smart
+              contracts, and DeFi platforms, Lunar Global Technologies takes your
+              idea from conception to deployment — and keeps it running long after
+              launch.
             </p>
           </Reveal>
           <Reveal delay={0.2}>
             <p className="text-pretty leading-relaxed text-mist">
-              We partner with organizations that cannot afford to be wrong — and
-              we measure ourselves by what we put into production.
+              We partner with startups, SMEs, and enterprises across India and the
+              globe — and we measure ourselves by the products we ship and the
+              relationships we keep.
             </p>
           </Reveal>
         </div>

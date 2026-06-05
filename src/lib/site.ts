@@ -3,33 +3,44 @@
  * point metadata at your production domain.
  */
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ?? "https://lunar.tech";
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
+  "https://www.lunarglobaltechnologies.com";
+
+const PHONE_RAW = "918755247673";
 
 export const site = {
-  name: "Lunar",
-  legalName: "Lunar Technologies",
-  domain: "lunar.tech",
+  name: "Lunar Global Technologies",
+  shortName: "Lunar Global",
+  legalName: "Lunar Global Technologies",
+  founder: "Rajat Pratap Singh",
+  domain: "lunarglobaltechnologies.com",
   url: SITE_URL,
-  tagline: "Software for the next frontier.",
+  tagline: "Building the future — Web2, Web3 & beyond.",
   description:
-    "Lunar is a product-focused technology company engineering mission-critical software for governments, enterprises, and telecom operators — from blockchain infrastructure to telecom intelligence platforms.",
-  email: "hello@lunar.tech",
-  inquiriesEmail: "partnerships@lunar.tech",
-  phone: "+1 (415) 000-0000",
-  location: "San Francisco · Remote-first",
+    "Lunar Global Technologies is a full-service technology company delivering end-to-end digital products — websites, web apps, mobile apps, blockchain & DeFi platforms, and on-demand product development — for startups, SMEs, and enterprises in India and worldwide.",
+  email: "info@lunarglobaltechnologies.com",
+  inquiriesEmail: "info@lunarglobaltechnologies.com",
+  phone: "+91 87552 47673",
+  phoneRaw: PHONE_RAW,
+  phoneTel: "+918755247673",
+  whatsapp: `https://wa.me/${PHONE_RAW}?text=${encodeURIComponent(
+    "Hi, I found you on your website and would like to discuss a project."
+  )}`,
+  location: "India · Serving clients globally",
   social: {
-    linkedin: "https://www.linkedin.com/",
-    x: "https://x.com/",
-    github: "https://github.com/",
+    linkedin: "https://www.linkedin.com/company/lunar-global-technologies",
+    x: "https://x.com/lunarglobaltech",
+    instagram: "https://www.instagram.com/lunarglobaltechnologies",
+    github: "https://github.com/lunarglobaltech",
+    telegram: "https://t.me/lunarglobaltech",
   },
-  ogImage: "/opengraph-image",
 } as const;
 
 export type NavLink = { label: string; href: string };
 
 export const navLinks: NavLink[] = [
-  { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
-  { label: "Projects", href: "/projects" },
+  { label: "Portfolio", href: "/projects" },
+  { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];

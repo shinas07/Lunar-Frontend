@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mail, MapPin, Clock, ShieldCheck } from "lucide-react";
+import { Mail, MapPin, Phone, MessageCircle } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { PageHeader } from "@/components/sections/shared/PageHeader";
@@ -10,15 +10,15 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Start a project with Lunar. Tell us about your blockchain, telecom intelligence, enterprise, or data platform — and we'll tell you how we'd engineer it.",
+    "Get a free quote from Lunar Global Technologies. Tell us about your website, app, or Web3 project — phone, email, and WhatsApp available.",
   alternates: { canonical: "/contact" },
 };
 
 const details = [
+  { icon: Phone, label: "Call us", value: site.phone, href: `tel:${site.phoneTel}` },
+  { icon: MessageCircle, label: "WhatsApp", value: site.phone, href: site.whatsapp },
   { icon: Mail, label: "Email us", value: site.email, href: `mailto:${site.email}` },
   { icon: MapPin, label: "Based in", value: site.location },
-  { icon: Clock, label: "Response time", value: "Within 1 business day" },
-  { icon: ShieldCheck, label: "Discretion", value: "NDAs welcome on request" },
 ];
 
 export default function ContactPage() {

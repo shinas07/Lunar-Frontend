@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 export function SpotlightCard({
   children,
   className,
-  spotlightColor = "rgba(77,166,255,0.14)",
+  spotlightColor = "rgba(0,194,255,0.14)",
 }: {
   children: React.ReactNode;
   className?: string;

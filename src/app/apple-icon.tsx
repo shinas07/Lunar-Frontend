@@ -25,8 +25,8 @@ export default function AppleIcon() {
             width: 104,
             height: 104,
             borderRadius: "50%",
-            background: "linear-gradient(135deg, #9fd0ff 0%, #4da6ff 55%, #8b5cf6 100%)",
-            boxShadow: "0 0 48px 6px rgba(77,166,255,0.45)",
+            background: "linear-gradient(135deg, #9fd0ff 0%, #00c2ff 55%, #14a8cf 100%)",
+            boxShadow: "0 0 48px 6px rgba(0,194,255,0.45)",
             display: "flex",
           }}
         >
