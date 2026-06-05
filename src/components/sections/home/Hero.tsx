@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, ArrowDown } from "lucide-react";
 import { Starfield } from "@/components/ui/Starfield";
-import { Moon } from "@/components/ui/Moon";
+import { Moon3D } from "@/components/ui/moon3d/Moon3D";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 import { Magnetic } from "@/components/ui/Magnetic";
@@ -42,7 +42,7 @@ export function Hero() {
         style={{ y: yMoon, opacity }}
         className="pointer-events-none absolute left-1/2 top-[8%] -z-0 w-[78vw] max-w-[640px] -translate-x-1/2 md:left-[68%] md:top-1/2 md:w-[42vw] md:-translate-y-1/2"
       >
-        <Moon className="w-full" />
+        <Moon3D className="w-full" />
       </motion.div>
 
       {/* Content */}
@@ -59,7 +59,7 @@ export function Hero() {
             <Eyebrow>Product Engineering Studio</Eyebrow>
           </motion.div>
 
-          <h1 className="mt-6 font-display text-[3.2rem] font-semibold leading-[0.98] tracking-tight text-cloud sm:text-7xl lg:text-[5.6rem]">
+          <h1 className="mt-6 font-display text-[clamp(3rem,8.4vw,7.5rem)] font-semibold leading-[0.9] tracking-[-0.03em] text-cloud">
             {headline.map((word, i) => (
               <span key={i} className="mr-[0.25em] inline-block overflow-hidden align-bottom">
                 <motion.span

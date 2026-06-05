@@ -129,7 +129,7 @@ function FooterLink({ href, children }: { href: string; children: React.ReactNod
   return (
     <Link
       href={href}
-      className="text-sm text-haze transition-colors hover:text-cloud"
+      className="link-underline inline-block w-fit text-sm text-haze transition-colors hover:text-cloud"
     >
       {children}
     </Link>

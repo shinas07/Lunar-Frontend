@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { SpotlightCard } from "@/components/ui/SpotlightCard";
+import { Tilt } from "@/components/ui/Tilt";
 import { cn } from "@/lib/utils";
 import type { Service } from "@/lib/data";
 
@@ -23,7 +24,8 @@ export function ServiceCard({
   const accent = accentMap[service.accent];
 
   return (
-    <SpotlightCard spotlightColor={accent.glow} className="h-full">
+    <Tilt className="h-full">
+      <SpotlightCard spotlightColor={accent.glow} className="h-full">
       <Link href={href} className="flex h-full flex-col p-7 md:p-8">
         <div className="flex items-center justify-between">
           <span
@@ -58,6 +60,7 @@ export function ServiceCard({
           </ul>
         )}
       </Link>
-    </SpotlightCard>
+      </SpotlightCard>
+    </Tilt>
   );
 }

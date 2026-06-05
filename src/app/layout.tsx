@@ -6,6 +6,9 @@ import { SmoothScroll } from "@/components/layout/SmoothScroll";
 import { ScrollProgress } from "@/components/layout/ScrollProgress";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { Intro } from "@/components/layout/Intro";
+import { CustomCursor } from "@/components/layout/CustomCursor";
+import { GrainOverlay } from "@/components/ui/GrainOverlay";
 import { JsonLd } from "@/components/seo/JsonLd";
 
 const display = Space_Grotesk({
@@ -92,8 +95,11 @@ export default function RootLayout({
     >
       <body className="min-h-dvh bg-ink text-haze">
         <JsonLd />
+        <Intro />
         <SmoothScroll />
         <ScrollProgress />
+        <CustomCursor />
+        <GrainOverlay />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-electric focus:px-4 focus:py-2 focus:text-ink"

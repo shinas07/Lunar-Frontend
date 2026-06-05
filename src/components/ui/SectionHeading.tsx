@@ -36,7 +36,7 @@ export function SectionHeading({
         as={as}
         text={title}
         className={cn(
-          "max-w-3xl text-balance text-4xl font-semibold leading-[1.05] text-cloud sm:text-5xl md:text-[3.4rem]",
+          "max-w-3xl text-balance text-[clamp(2.25rem,4.5vw,4rem)] font-semibold leading-[1.0] tracking-[-0.02em] text-cloud",
           align === "center" && "mx-auto justify-center"
         )}
       />

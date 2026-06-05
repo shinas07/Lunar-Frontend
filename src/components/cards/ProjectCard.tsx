@@ -1,5 +1,6 @@
 import { ArrowUpRight, Lock } from "lucide-react";
 import { SpotlightCard } from "@/components/ui/SpotlightCard";
+import { Tilt } from "@/components/ui/Tilt";
 import { cn } from "@/lib/utils";
 import type { Project } from "@/lib/data";
 
@@ -19,7 +20,8 @@ export function ProjectCard({ project }: { project: Project }) {
   const accent = accentMap[project.accent];
 
   return (
-    <SpotlightCard spotlightColor={accent.glow} className="h-full">
+    <Tilt className="h-full" max={5}>
+      <SpotlightCard spotlightColor={accent.glow} className="h-full">
       <div className="flex h-full flex-col p-7 md:p-9">
         {/* Visual band */}
         <div
@@ -75,6 +77,7 @@ export function ProjectCard({ project }: { project: Project }) {
           ))}
         </div>
       </div>
-    </SpotlightCard>
+      </SpotlightCard>
+    </Tilt>
   );
 }
