@@ -1,0 +1,13 @@
+# Netlify configuration for the Lunar (Next.js) website.
+# The official Next.js Runtime is auto-installed by Netlify and handles
+# SSR routes (e.g. /api/contact) and image optimization.
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
