@@ -69,10 +69,8 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
-  icons: {
-    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
-    apple: [{ url: "/icon.svg" }],
-  },
+  // Favicon + Apple touch icon are provided by src/app/icon.svg and
+  // src/app/apple-icon.tsx (Next.js file-based metadata convention).
   category: "technology",
 };
 
