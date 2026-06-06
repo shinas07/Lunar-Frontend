@@ -55,6 +55,7 @@
   --animate-spin-slow: spin 26s linear infinite;
   --animate-shimmer: shimmer 2.4s linear infinite;
   --animate-aurora: aurora 18s ease-in-out infinite alternate;
+  --animate-loader-bar: loader-bar 1.15s ease-in-out infinite;
 }
 
 @keyframes marquee {
@@ -81,6 +82,10 @@
   0% { transform: translate3d(-6%, -2%, 0) rotate(0deg) scale(1.1); }
   50% { transform: translate3d(6%, 4%, 0) rotate(8deg) scale(1.25); }
   100% { transform: translate3d(-4%, 2%, 0) rotate(-6deg) scale(1.15); }
+}
+@keyframes loader-bar {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(320%); }
 }
 
 /* ============================================================

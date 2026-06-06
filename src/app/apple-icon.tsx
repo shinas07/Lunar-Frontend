@@ -3,7 +3,7 @@ import { ImageResponse } from "next/og";
 export const size = { width: 180, height: 180 };
 export const contentType = "image/png";
 
-/** Apple touch icon — a luminous crescent moon on a deep-space field. */
+/** Apple touch icon — a glossy crescent moon on a deep-space field. */
 export default function AppleIcon() {
   return new ImageResponse(
     (
@@ -15,31 +15,47 @@ export default function AppleIcon() {
           alignItems: "center",
           justifyContent: "center",
           background:
-            "radial-gradient(120px 120px at 32% 28%, #16284d 0%, #070b16 60%, #05060a 100%)",
+            "radial-gradient(130px 130px at 34% 26%, #16284d 0%, #070b16 60%, #05060a 100%)",
         }}
       >
-        {/* full moon */}
+        {/* moon disc */}
         <div
           style={{
             position: "relative",
-            width: 104,
-            height: 104,
+            width: 108,
+            height: 108,
             borderRadius: "50%",
-            background: "linear-gradient(135deg, #9fd0ff 0%, #00c2ff 55%, #14a8cf 100%)",
-            boxShadow: "0 0 48px 6px rgba(0,194,255,0.45)",
+            background:
+              "linear-gradient(135deg, #eaf7ff 0%, #3fb0e0 52%, #0a5577 100%)",
+            boxShadow: "0 0 30px 2px rgba(63,176,224,0.3)",
             display: "flex",
+            overflow: "hidden",
           }}
         >
+          {/* glossy specular sheen */}
+          <div
+            style={{
+              position: "absolute",
+              top: 8,
+              left: 6,
+              width: 56,
+              height: 40,
+              borderRadius: "50%",
+              background:
+                "radial-gradient(closest-side, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0) 100%)",
+              display: "flex",
+            }}
+          />
           {/* crescent cutout */}
           <div
             style={{
               position: "absolute",
-              top: -16,
-              left: 22,
+              top: -14,
+              left: 26,
               width: 96,
               height: 96,
               borderRadius: "50%",
-              background: "#070b16",
+              background: "#070d1a",
               display: "flex",
             }}
           />
