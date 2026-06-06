@@ -31,7 +31,7 @@ export function PageHeader({
         <TextReveal
           as="h1"
           text={title}
-          className="mt-6 max-w-4xl text-[clamp(2.75rem,6.5vw,6rem)] font-semibold leading-[0.98] tracking-[-0.03em] text-cloud"
+          className="mt-6 max-w-4xl text-[clamp(2.5rem,5.6vw,5.25rem)] font-semibold leading-[1] tracking-[-0.03em] text-cloud"
         />
         <Reveal delay={0.15}>
           <p className="mt-7 max-w-2xl text-pretty text-lg leading-relaxed text-haze md:text-xl">

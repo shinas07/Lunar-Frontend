@@ -66,9 +66,57 @@ export function Navbar() {
                   {active && (
                     <motion.span
                       layoutId="nav-active"
-                      className="absolute inset-0 -z-10 rounded-full bg-elevated"
+                      className="absolute inset-0 -z-10 rounded-full"
                       transition={{ type: "spring", stiffness: 380, damping: 32 }}
-                    />
+                    >
+                      {/* soft halo for depth */}
+                      <span
+                        aria-hidden
+                        className="absolute -inset-1 rounded-full bg-electric/10 blur-md"
+                      />
+                      {/* faint base so the active page reads between sweeps */}
+                      <span className="absolute inset-0 rounded-full bg-electric/[0.06] ring-1 ring-inset ring-electric/25" />
+                      {/* bloom — blurred comet glow behind */}
+                      <span
+                        aria-hidden
+                        className="absolute inset-0 overflow-hidden rounded-full blur-[2.5px] motion-reduce:hidden"
+                        style={{
+                          padding: "2px",
+                          WebkitMask:
+                            "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",
+                          WebkitMaskComposite: "xor",
+                          maskComposite: "exclude",
+                        }}
+                      >
+                        <span
+                          className="absolute left-1/2 top-1/2 aspect-square w-[180%] -translate-x-1/2 -translate-y-1/2 animate-[spin_3.2s_linear_infinite] [will-change:transform]"
+                          style={{
+                            background:
+                              "conic-gradient(from 0deg, rgba(0,194,255,0) 0deg, rgba(0,194,255,0.2) 220deg, rgba(0,194,255,0.6) 320deg, rgba(127,227,255,0.95) 352deg, rgba(0,194,255,0) 360deg)",
+                          }}
+                        />
+                      </span>
+                      {/* crisp orbiting head + trailing comet */}
+                      <span
+                        aria-hidden
+                        className="absolute inset-0 overflow-hidden rounded-full motion-reduce:hidden"
+                        style={{
+                          padding: "1.5px",
+                          WebkitMask:
+                            "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",
+                          WebkitMaskComposite: "xor",
+                          maskComposite: "exclude",
+                        }}
+                      >
+                        <span
+                          className="absolute left-1/2 top-1/2 aspect-square w-[170%] -translate-x-1/2 -translate-y-1/2 animate-[spin_3.2s_linear_infinite] [will-change:transform]"
+                          style={{
+                            background:
+                              "conic-gradient(from 0deg, rgba(0,194,255,0) 0deg, rgba(0,194,255,0) 215deg, rgba(0,194,255,0.45) 305deg, rgba(180,240,255,1) 348deg, #ffffff 357deg, rgba(0,194,255,0) 360deg)",
+                          }}
+                        />
+                      </span>
+                    </motion.span>
                   )}
                   {link.label}
                 </Link>

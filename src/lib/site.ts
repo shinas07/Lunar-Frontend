@@ -13,6 +13,7 @@ export const site = {
   shortName: "Lunar Global",
   legalName: "Lunar Global Technologies",
   founder: "Rajat Pratap Singh",
+  founderLinkedin: "https://www.linkedin.com/in/rajat-pratap-singh-180879219/",
   domain: "lunarglobaltechnologies.com",
   url: SITE_URL,
   tagline: "Building the future — Web2, Web3 & beyond.",

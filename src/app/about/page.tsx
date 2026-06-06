@@ -110,15 +110,35 @@ export default function AboutPage() {
               </p>
             </Reveal>
             <Reveal delay={0.3}>
-              <div className="mt-7 flex items-center gap-4">
+              <a
+                href={site.founderLinkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${site.founder} on LinkedIn`}
+                className="group mt-7 inline-flex items-center gap-4"
+              >
                 <span className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-electric to-violet font-display text-base font-semibold text-ink">
-                  RP
+                  {site.founder
+                    .split(" ")
+                    .map((n) => n[0])
+                    .join("")
+                    .slice(0, 2)}
                 </span>
                 <div>
-                  <div className="font-medium text-cloud">{site.founder}</div>
+                  <div className="flex items-center gap-1.5 font-medium text-cloud transition-colors group-hover:text-electric">
+                    {site.founder}
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      aria-hidden
+                      className="h-3.5 w-3.5 text-mist transition-colors group-hover:text-electric"
+                    >
+                      <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0h4.78v2.2h.07c.67-1.2 2.3-2.46 4.73-2.46C22.4 7.74 24 10.06 24 14.2V24h-5v-8.7c0-2.07-.74-3.48-2.6-3.48-1.42 0-2.26.95-2.63 1.87-.14.33-.17.79-.17 1.25V24h-5s.07-14.5 0-16z" />
+                    </svg>
+                  </div>
                   <div className="text-sm text-mist">Founder &amp; CEO, Lunar Global Technologies</div>
                 </div>
-              </div>
+              </a>
             </Reveal>
           </div>
           <Reveal direction="none" className="relative mx-auto w-full max-w-sm">

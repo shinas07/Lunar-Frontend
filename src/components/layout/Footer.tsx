@@ -124,9 +124,22 @@ export function Footer() {
           <p>
             © {year} {site.legalName}. All rights reserved.
           </p>
-          <p className="font-mono text-xs uppercase tracking-widest text-faint">
-            {site.tagline}
-          </p>
+          <div className="flex flex-col items-start gap-1.5 sm:items-end">
+            <p className="font-mono text-xs uppercase tracking-widest text-faint">
+              {site.tagline}
+            </p>
+            <p className="text-xs text-faint">
+              Designed &amp; developed by{" "}
+              <a
+                href="https://www.linkedin.com/in/shinas-pk-ba592b270/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-mist transition-colors hover:text-electric"
+              >
+                Shinas
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
